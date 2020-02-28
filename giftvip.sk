@@ -1,0 +1,14 @@
+command /giftvip [<player>]:
+	permission: giftvip.use
+	permission message: &7You need &6&lPremium+ Rank &7to use that command!
+	trigger:
+		set {giftvip} to difference between {giftvip.%player%} and now
+		if {giftvip} is less than 10 days:
+			send "&7[&6&lLuxury&c&lRanks&7] &fYou must wait &c%difference between {giftvip} and 7 days% &fbefore gifting &2&lVIP &fagain!"
+			stop
+			set {giftvip.%player%} to now
+		else:
+			execute console command "manuadd %arg-1% vip"
+			send "&7[&6&lLuxury&c&lRanks&7] &e%arg-1% has been gifted &2&lVIP Rank &efrom %player%!" to all players
+			send "&7[&6&lLuxury&c&lRanks&7] &aRank Gifted!"
+			stop

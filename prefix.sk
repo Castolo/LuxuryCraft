@@ -1,0 +1,47 @@
+# wGrant Skript made by WindowsEight (Discord: WindowsEight#4619)
+# If you steal any of my code and/or repost it you will be reported kid
+
+options:
+	PrefixOne: &7[&bCOOL&7]
+	PrefixTwo: &7[&9BOSS&7]
+	PrefixThree: &7[&6PRO&7]
+	PrefixFour: &7[&cYT&7]
+	PrefixFive: &7[&3LOL&7]
+	PrefixSix: &7[&c&lLiar&7]
+	PrefixSeven: &7[&d&lLOSER&7]
+	PrefixEight: &7[&6&lSAD&7]
+	PrefixNine: &7[&6&lPotato&7]
+	PrefixTen: &7[&2&lAwwwMan&7]
+	PrefixEleven: &7[&3&lCastolo's &b&lFault&7]
+	PrefixTwelve: &7[&a&lCAAASHH&7]
+	PrefixThirteen: &7[&b&lSingle&7]
+	PrefixForteen: &7[&c&lMarried&7]
+	PrefixFifteen: &7[&4&lEpicGamer&7]
+
+command /Prefix:
+	permission: Prefix.use
+	permission message: &cNo permission!
+	trigger:
+		open chest with 3 row named "&5&lChoose A Prefix" to player
+		wait 1 tick
+		format slot 7 of player with black stained glass pane named " " to run [make player execute command "/Prefix"]
+		format slot 8 of player with black stained glass pane named " " to run [make player execute command "/Prefix"]
+		format slot 16 of player with black stained glass pane named " " to run [make player execute command "/Prefix"]
+		format slot 17 of player with black stained glass pane named " " to run [make player execute command "/Prefix"]
+		format slot 25 of player with black stained glass pane named " " to run [make player execute command "/Prefix"]
+		format slot 0 of player with red wool named "&6&l{@PrefixOne}" with lore "&7Click this to give the yourself Prefix {@PrefixOne}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixOne} '"] 
+		format slot 1 of player with blue wool named "&6&l{@PrefixTwo}" with lore "&7Click this to give the yourself Prefix {@PrefixTwo}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixTwo} '"] 
+		format slot 2 of player with yellow wool named "&6&l{@PrefixThree}" with lore "&7Click this to give yourself the Prefix {@PrefixThree}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixThree} '"] 
+		format slot 3 of player with pink wool named "&b&l{@PrefixFour}" with lore "&7Click this to give the yourself Prefix {@PrefixFour}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixFour} '"] 
+		format slot 4 of player with purple wool named "&d&l{@PrefixFive}" with lore "&7Click this to give yourself the Prefix {@PrefixFive}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixFive} '"] 
+		format slot 5 of player with green wool named "&6&l{@PrefixSix}" with lore "&7Click this to give yourself the Prefix {@PrefixSix}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixSix} '"] 
+		format slot 6 of player with gray wool named "&6&l{@PrefixSeven}" with lore "&7Click this to give yourself the Prefix {@PrefixSeven}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixSeven} '"] 
+		format slot 9 of player with cyan wool named "&6&l{@PrefixEight}" with lore "&7Click this to give yourself the Prefix {@PrefixEight}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixEight} '"]
+		format slot 10 of player with light blue wool named "&6&l{@PrefixNine}" with lore "&7Click this to give yourself the Prefix {@PrefixNine}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixNine} '"]
+		format slot 11 of player with brown wool named "&6&l{@PrefixTen}" with lore "&7Click this to give yourself the Prefix {@PrefixTen}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixTen} '"] 
+		format slot 12 of player with magenta wool named "&6&l{@PrefixEleven}" with lore "&7Click this to give yourself the Prefix {@PrefixEleven}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixEleven} '"]
+		format slot 13 of player with lime wool named "&6&l{@PrefixTwelve}" with lore "&7Click this to give yourself the Prefix {@PrefixTwelve}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixTwelve} '"]
+		format slot 14 of player with light gray wool named "&6&l{@PrefixThirteen}" with lore "&7Click this to give yourself the Prefix {@PrefixThirteen}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixThirteen} '"]
+		format slot 15 of player with orange wool named "&6&l{@PrefixForteen}" with lore "&7Click this to give yourself the Prefix {@PrefixForteen}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixForteen} '"]
+		format slot 18 of player with black wool named "&6&l{@PrefixFifteen}" with lore "&7Click this to give yourself the Prefix {@PrefixFifteen}" to close then run [make console execute command "manuaddv %player% prefix {@PrefixFifteen} '"]			
+		format slot 26 of player with barrier named "&f&lClear Prefix" with lore "&7Click this to Clear your Prefix" to close then run [make console execute command "manudelv %player% prefix"] 

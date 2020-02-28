@@ -1,0 +1,53 @@
+command /buykey [<text>]:
+	executable by: Players
+	aliases: /bk
+	trigger:
+		if arg-1 is not set:
+			open chest with 1 row named "&8&lKeys" to player
+			set {_key} to tripwire hook
+			enchant {_key} with unbreaking 1
+			format slot 2 of player with {_key} named "&fLegendary Keys" with lore "&aPrice: $1.000.000 per 5" to run [execute player command "/buykey legendary"]
+			format slot 3 of player with {_key} named "&fRAINBOW Keys" with lore "&aPrice: $2.500.000 per 5" to run [execute player command "/buykey rainbow"]
+			format slot 4 of player with {_key} named "&fCHRISTMAS Keys" with lore "&aPrice: $5.000.000 per 5" to run [execute player command "/buykey january"]
+			format slot 5 of player with {_key} named "&fFebruary Keys" with lore "&aPrice: $7.500.000 per 5" to run [execute player command "/buykey february"]
+			format slot 6 of player with {_key} named "&fMarch Keys" with lore "&aComing Soon!" to run [execute player command "/buykey"]
+		if arg-1 is "legendary":
+			execute player command "/bke legendary"
+		if arg-1 is "rainbow":
+			execute player command "/bke rainbow"
+		if arg-1 is "january" or "jan":
+			execute player command "/bke january"
+		if arg-1 is "february" or "feb":
+			execute player command "/bke february"
+	
+command /bke [<text>]:
+	executable by: Players
+	trigger:
+		if arg-1 is "legendary":
+			if player's balance is above or equal to 1000000:
+				send "&aSuccessfully purchased!"
+				execute console command "/key legendary %player% 5"
+				execute console command "/eco take %player% 1000000"
+			else:
+				send "&7You have insufficient funds!"
+		if arg-1 is "rainbow":
+			if player's balance is above or equal to 2500000:
+				send "&aSuccessfully purchased!"
+				execute console command "/key rainbow %player% 5"
+				execute console command "/eco take %player% 2500000"
+			else:
+				send "&7You have insufficient funds!"
+		if arg-1 is "christmas":
+			if player's balance is above or equal to 5000000:
+				send "&aSuccessfully purchased!"
+				execute console command "/key christmas %player% 5"
+				execute console command "/eco take %player% 5000000"
+			else:
+				send "&7You have insufficient funds!"
+		if arg-1 is "february" or "feb":
+			if player's balance is above or equal to 7500000:
+				send "&aSuccessfully purchased!"
+				execute console command "/key february %player% 5"
+				execute console command "/eco take %player% 7500000"
+			else:
+				send "&7You have insufficient funds!"

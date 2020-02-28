@@ -1,0 +1,10 @@
+command /rules:
+  trigger:
+    message "&e---------------&b&lRULES&e-----------------"
+    message "• &bDon't Spam in Chat &c(=Mute)"
+    message "• &bDon't be Toxic to others &c(=Mute or Ban)"
+    message "• &bDon't ask to be Staff &c(=Mute)"
+    message "• &bDon't Grief or Steal &c(=Ban)"
+    message "• &bDon't Abuse Commands &c(=Ban)"
+    message "• &bMake sure to enjoy your stay here!"
+    message "&e--------------------------------------"

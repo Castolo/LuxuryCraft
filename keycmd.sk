@@ -1,0 +1,40 @@
+command /key [<text>] [<text>]:
+	permission: key.get
+	permission message: &7[&6&lLuxury&c&lCraft&7] &cNo permission!
+	trigger:
+		if arg-1 is "party":
+			execute console command "crate key %arg-1% party %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "common":
+			execute console command "crate key %player% common %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "rare":
+			execute console command "crate key %player% rare %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "deluxe":
+			execute console command "crate key %player% deluxe %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "legendary":
+			execute console command "crate key %player% legendary %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "rainbow":
+			execute console command "crate key %player% rainbow %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "christmas":
+			execute console command "crate key %player% christmas %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "february":
+			execute console command "crate key %player% february %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop
+		if arg-1 is "all":
+			execute console command "crate key all party %arg-2%"
+			send "&7[&6&lLuxury&c&lCrates&7] &aKeys Sent!"
+			stop

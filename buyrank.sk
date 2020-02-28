@@ -1,0 +1,117 @@
+command /buyrank [<text>]:
+	executable by: Players
+	aliases: /br
+	trigger:
+		if arg-1 is not set:
+			open chest with 1 row named "&8&lRanks" to player
+			format slot 3 of player with paper named "&2&lVIP&6&l+ &fRank" with lore "&aPrice: $10.000.000" to run [execute player command "/buyrank vip+"]
+			format slot 4 of player with paper named "&b&lMVP&6&l+ &fRank" with lore "&aPrice: $25.000.000" to run [execute player command "/buyrank mvp+"]
+			format slot 5 of player with paper named "&b&lMVP&6&l++ &fRank" with lore "&aPrice: $50.000.000" to run [execute player command "/buyrank mvp++"]
+		if arg-1 is "vip+":
+			execute player command "/brconfirm vip+"
+		if arg-1 is "mvp+":
+			execute player command "/brconfirm mvp+"
+		if arg-1 is "mvp++":
+			execute player command "/brconfirm mvp++"
+			
+command /brconfirm [<text>]:
+	executable by: Players
+	trigger:
+		if arg-1 is "vip+":
+			open chest with 3 row named "&2&lConfirm &7or &c&lCancel" to player
+			wait 1 tick
+			format slot 1 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 2 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 3 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 10 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 11 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 12 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 19 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 20 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 21 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre vip+"]
+			format slot 5 of player with red wool named "&c&lCancel" to close
+			format slot 6 of player with red wool named "&c&lCancel" to close
+			format slot 7 of player with red wool named "&c&lCancel" to close
+			format slot 14 of player with red wool named "&c&lCancel" to close
+			format slot 15 of player with red wool named "&c&lCancel" to close
+			format slot 16 of player with red wool named "&c&lCancel" to close
+			format slot 23 of player with red wool named "&c&lCancel" to close
+			format slot 24 of player with red wool named "&c&lCancel" to close
+			format slot 25 of player with red wool named "&c&lCancel" to close
+		if arg-1 is "mvp+":
+			open chest with 3 row named "&2&lConfirm &7or &c&lCancel" to player
+			wait 1 tick
+			format slot 1 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 2 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 3 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 10 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 11 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 12 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 19 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 20 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 21 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp+"]
+			format slot 5 of player with red wool named "&c&lCancel" to close
+			format slot 6 of player with red wool named "&c&lCancel" to close
+			format slot 7 of player with red wool named "&c&lCancel" to close
+			format slot 14 of player with red wool named "&c&lCancel" to close
+			format slot 15 of player with red wool named "&c&lCancel" to close
+			format slot 16 of player with red wool named "&c&lCancel" to close
+			format slot 23 of player with red wool named "&c&lCancel" to close
+			format slot 24 of player with red wool named "&c&lCancel" to close
+			format slot 25 of player with red wool named "&c&lCancel" to close
+		if arg-1 is "mvp++":
+			open chest with 3 row named "&2&lConfirm &7or &c&lCancel" to player
+			wait 1 tick
+			format slot 1 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 2 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 3 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 10 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 11 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 12 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 19 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 20 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 21 of player with lime wool named "&a&lConfirm" to close then run [execute player command "/bre mvp++"]
+			format slot 5 of player with red wool named "&c&lCancel" to close
+			format slot 6 of player with red wool named "&c&lCancel" to close
+			format slot 7 of player with red wool named "&c&lCancel" to close
+			format slot 14 of player with red wool named "&c&lCancel" to close
+			format slot 15 of player with red wool named "&c&lCancel" to close
+			format slot 16 of player with red wool named "&c&lCancel" to close
+			format slot 23 of player with red wool named "&c&lCancel" to close
+			format slot 24 of player with red wool named "&c&lCancel" to close
+			format slot 25 of player with red wool named "&c&lCancel" to close
+		
+		
+command /bre [<text>]:
+	executable by: Players
+	trigger:
+		if arg-1 is "vip+":
+			if player's balance is above or equal to 10000000:
+				if player does not have permission "vip+.higher":
+					send "&aSuccessfully purchased!"
+					execute console command "/manuadd %player% vip+"
+					execute console command "/eco take %player% 10000000"
+				else:
+					send "&7You already have a higher rank!"
+			else:
+				send "&7You have insufficient funds!"
+		if arg-1 is "mvp+":
+			if player's balance is above or equal to 25000000:
+				if player does not have permission "mvp+.higher":
+					send "&aSuccessfully purchased!"
+					execute console command "/manuadd %player% mvp+"
+					execute console command "/eco take %player% 25000000"
+				else:
+					send "&7You already have a higher rank!"
+			else:
+				send "&7You have insufficient funds!"
+		if arg-1 is "mvp++":
+			if player's balance is above or equal to 50000000:
+				if player does not have permission "mvp++.higher":
+					send "&aSuccessfully purchased!"
+					execute console command "/manuadd %player% mvp++"
+					execute console command "/eco take %player% 50000000"
+				else:
+					send "&7You already have a higher rank!"
+			else:
+				send "&7You have insufficient funds!"

@@ -1,0 +1,9 @@
+command /onlinestaff:
+	aliases: /astaff, /onstaff, /activestaff
+	permission: cmd.staff
+	permission message: &cNo Permission!
+	trigger:
+		loop players:
+			loop-player has permission "cmd.staff"
+			add loop-player to {_onlineStaff::*}
+		send "&6Online Staff:&e %{_onlineStaff::*}%" to the command sender

@@ -1,0 +1,8 @@
+command /clearchat:
+	aliases: /cc
+	permission: cc.use
+	permission message: &7[&6&lLuxuryCraft&c&lCraft&7] &cYou have no permission to use that command!
+	trigger:
+		loop 100 times:
+			broadcast ""
+		broadcast "&cThe chat has been cleared by a Moderator"

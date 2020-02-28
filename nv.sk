@@ -1,0 +1,18 @@
+variables:
+	{nv.mode} = "False"
+
+command /nv:
+	aliases: /nightvision
+	permission: nv.use
+	permission message: &7You need &b&lMVP Rank &7to use that command!
+	trigger:
+		if {nv.mode} is "False":
+			set {nv.mode} to "True"
+			execute console command "/effect give %player% minecraft:night_vision 1000000 100 true"
+			send "&aNight Vision enabled!"
+			stop
+		else:
+			set {nv.mode} to "False"
+			execute console command "/effect clear %player% minecraft:night_vision"
+			send "&cNight Vision disabled!"
+			stop				

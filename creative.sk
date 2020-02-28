@@ -1,0 +1,5 @@
+command /creative:
+    aliases: /c
+    trigger:
+        execute player command "/warp c"
+        stop

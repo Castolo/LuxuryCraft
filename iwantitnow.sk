@@ -1,0 +1,4 @@
+command /iwantitnow:
+	trigger:
+		message "&7[&6&lLuxury&c&lCraft&7] &aForcing purchase check!"
+		execute console command "buycraft forcecheck"

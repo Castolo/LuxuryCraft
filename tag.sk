@@ -1,0 +1,12 @@
+command /tag [<text>]:
+	permission: tag.use
+	permission message: &7You need &6&lPremium++ Rank &7to use this command!
+	trigger:
+		if arg-1 is "clear":
+			execute console command "manudelv %player% suffix"
+			send "&aSuffix Cleared!"
+			stop
+		else:
+			execute console command "/manuaddv %player% suffix ' &7[%arg-1%&7]"
+			send "&aSuffix Updated!"
+			send "&aNew Suffix: &7[%arg-1%&7]"

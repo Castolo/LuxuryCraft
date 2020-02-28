@@ -1,0 +1,19 @@
+command /collect [<text>] [<text>]:
+	permission: collect.use
+	trigger:
+		if arg-1 is "blocks":
+			give player blue wool named "&9&lBLUE" with lore "&6Collect all 3 and right-click them to gain $1.000.000"	
+			give player red wool named "&c&lRED" with lore "&6Collect all 3 and right-click them to gain $1.000.000"
+			give player lime wool named "&a&lGREEN" with lore "&6Collect all 3 and right-click them to gain $1.000.000"
+			stop
+		
+on right click:
+	player has red wool named "&c&lRED" with lore "&6Collect all 3 and right-click them to gain $1.000.000"
+	player has lime wool named "&a&lGREEN" with lore "&6Collect all 3 and right-click them to gain $1.000.000"
+	player has blue wool named "&9&lBLUE" with lore "&6Collect all 3 and right-click them to gain $1.000.000"
+	remove 1 red wool named "&c&lRED" with lore "&6Collect all 3 and right-click them to gain $1.000.000" from player
+	remove 1 lime wool named "&a&lGREEN" with lore "&6Collect all 3 and right-click them to gain $1.000.000" from player
+	remove 1 blue wool named "&9&lBLUE" with lore "&6Collect all 3 and right-click them to gain $1.000.000" from player
+	execute console command "/eco give %player% 1000000"
+	send "&aSuccessfully collected and redeemed."
+	stop

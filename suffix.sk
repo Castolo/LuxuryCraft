@@ -1,0 +1,49 @@
+# wGrant Skript made by WindowsEight (Discord: WindowsEight#4619)
+# If you steal any of my code and/or repost it you will be reported kid
+
+options:
+	suffixOne: &7[&bCOOL&7]
+	suffixTwo: &7[&9BOSS&7]
+	suffixThree: &7[&6PRO&7]
+	suffixFour: &7[&cYT&7]
+	suffixFive: &7[&3LOL&7]
+	suffixSix: &7[&c&lLiar&7]
+	suffixSeven: &7[&d&lLOSER&7]
+	suffixEight: &7[&6&lSAD&7]
+	suffixNine: &7[&6&lPotato&7]
+	suffixTen: &7[&2&lAwwwMan&7]
+	suffixEleven: &7[&3&lCastolo's &b&lFault&7]
+	suffixTwelve: &7[&a&lCAAASHH&7]
+	suffixThirteen: &7[&b&lSingle&7]
+	suffixForteen: &7[&c&lMarried&7]
+	suffixFifteen: &7[&4&lEpicGamer&7]
+	
+
+command /suffix:
+	permission: suffix.use
+	permission message: &cNo permission!
+	trigger:
+		open chest with 3 row named "&5&lChoose A suffix" to player
+		wait 1 tick
+		format slot 7 of player with black stained glass pane named " " to run [make player execute command "/suffix"]
+		format slot 8 of player with black stained glass pane named " " to run [make player execute command "/suffix"]
+		format slot 16 of player with black stained glass pane named " " to run [make player execute command "/suffix"]
+		format slot 17 of player with black stained glass pane named " " to run [make player execute command "/suffix"]
+		format slot 25 of player with black stained glass pane named " " to run [make player execute command "/suffix"]
+		format slot 0 of player with red wool named "&6&l{@suffixOne}" with lore "&7Click this to give the yourself suffix {@suffixOne}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixOne}"] 
+		format slot 1 of player with blue wool named "&6&l{@suffixTwo}" with lore "&7Click this to give the yourself suffix {@suffixTwo}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixTwo}"] 
+		format slot 2 of player with yellow wool named "&6&l{@suffixThree}" with lore "&7Click this to give yourself the suffix {@suffixThree}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixThree}"] 
+		format slot 3 of player with pink wool named "&b&l{@suffixFour}" with lore "&7Click this to give the yourself suffix {@suffixFour}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixFour}"] 
+		format slot 4 of player with purple wool named "&d&l{@suffixFive}" with lore "&7Click this to give yourself the suffix {@suffixFive}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixFive}"] 
+		format slot 5 of player with green wool named "&6&l{@suffixSix}" with lore "&7Click this to give yourself the suffix {@suffixSix}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixSix}"] 
+		format slot 6 of player with gray wool named "&6&l{@suffixSeven}" with lore "&7Click this to give yourself the suffix {@suffixSeven}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixSeven}"] 
+		format slot 9 of player with cyan wool named "&6&l{@suffixEight}" with lore "&7Click this to give yourself the suffix {@suffixEight}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixEight}"]
+		format slot 10 of player with light blue wool named "&6&l{@suffixNine}" with lore "&7Click this to give yourself the suffix {@suffixNine}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixNine}"]
+		format slot 11 of player with brown wool named "&6&l{@suffixTen}" with lore "&7Click this to give yourself the suffix {@suffixTen}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixTen}"] 
+		format slot 12 of player with magenta wool named "&6&l{@suffixEleven}" with lore "&7Click this to give yourself the suffix {@suffixEleven}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixEleven} "]
+		format slot 13 of player with lime wool named "&6&l{@suffixTwelve}" with lore "&7Click this to give yourself the suffix {@suffixTwelve}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixTwelve"]
+		format slot 14 of player with light gray wool named "&6&l{@suffixThirteen}" with lore "&7Click this to give yourself the suffix {@suffixThirteen}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixThirteen}"]
+		format slot 15 of player with orange wool named "&6&l{@suffixForteen}" with lore "&7Click this to give yourself the suffix {@suffixForteen}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixForteen}"]	
+		format slot 18 of player with black wool named "&6&l{@suffixFifteen}" with lore "&7Click this to give yourself the suffix {@suffixFifteen}" to close then run [make console execute command "manuaddv %player% suffix ' {@suffixFifteen}"]	
+		format slot 26 of player with barrier named "&f&lClear suffix" with lore "&7Click this to Clear your suffix" to close then run [make console execute command "manudelv %player% suffix"]
+		stop

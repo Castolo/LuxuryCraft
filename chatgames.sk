@@ -1,0 +1,80 @@
+#
+# ChatGame by Andalmere | Please leave a 5-star review ;)
+#
+
+# Here you can configure everything you want, from prefixes to modes.
+options:
+
+# -=[]=-
+# Settings
+# -=[]=-
+
+# Prefixes will be displayed in each broadcast.
+    prefix: &8[&2C&ah&6a&ct &4G&ea&3m&be&8]
+    
+# Minimum players in order to start the chat game.
+    min-players: 1
+    
+# Delay between each game/broadcast.
+    delay: 600
+    
+# How many random characters to be guessed?
+    chars: 8
+    
+# Do we need to hide the answer of the player who guessed the answer?
+    hide-word-on-chat: false
+    
+# Enable reward when a player guessed the answer?
+    enable-reward: true
+    
+# If enable-reward is enabled, this command will be executed.
+    reward-command: key deluxe %player% 1
+    
+# This would be displayed if a new chatgame starts.
+    broadcast-pending: &6Type this to win » &e%{word}%&6!
+    
+# This would be displayed if someone guessed the answer.
+    broadcast-win: &e%player% &6won the game!
+    
+# How many seconds do we need to wait to consider that no one answered the chatgame.
+    warm-seconds: 60
+    
+# This would be displayed if no one answered the chatgame.
+    broadcast-none: &cNo one answered the chatgame.
+    
+# ---------------------------------------------= [ Code ] =-----------------------------------------------------------
+    
+on join:
+    add 1 to {chatgame.players::*}
+    
+on quit:
+    reduce {chatgame.players::*} by 1
+    
+every {@delay} seconds:
+    {chatgame.players::*} >= {@min-players}
+    set {chatgame.chat} to true
+    set {word} to random {@chars} char string from `a-zA-Z`
+    broadcast "{@prefix} {@broadcast-pending}"
+    set {chatgame.active} to now
+    stop
+        
+on chat:
+    if {chatgame.chat} is true:
+        if message contains "%{word}%":
+            set {chatgame.chat} to false
+            delete {chatgame.active}
+            if {@hide-word-on-chat} is true:
+                cancel event
+            if {@enable-reward} is true:
+                execute console command "{@reward-command}"
+            broadcast "{@prefix} {@broadcast-win}"
+    stop
+    
+every tick:
+    if {chatgame.active} is set:
+        if difference between {chatgame.active} and now is greater than {@warm-seconds} seconds:
+            set {chatgame.chat} to false
+            delete {chatgame.active}
+            broadcast "{@prefix} {@broadcast-none}"
+    stop
+# --------------------------------------------= [ End of Code ] =-----------------------------------------------------

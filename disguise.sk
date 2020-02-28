@@ -1,0 +1,25 @@
+command /d [<text>]:
+	aliases: /disguise
+	permission: d.use
+	permission message: &c&lNo permission!
+	trigger:
+		if arg-1 is not set:
+			open chest with 1 row named "&5&lChoose A Disguise" to player
+			wait 1 tick
+			format slot 0 of player with lime wool named "&a&lMEMBER" to run [make console execute command "/manuaddv %player% prefix &7[&a&lMEMBER&7] '"]
+			format slot 1 of player with green wool named "&2&lVIP" to run [make console execute command "/manuadd %player% prefix &7[&2&lVIP&7] '"]
+			format slot 2 of player with green wool named "&2&lVIP&6&l+" to run [make console execute command "/manuadd %player% prefix &7[&2&lVIP&6&l+&7] '"]
+			format slot 3 of player with green wool named "&2&lVIP&6&l++" to run [make console execute command "/manuadd %player% prefix &7[&2&lVIP&6&l++&7]
+			format slot 4 of player with cyan wool named "&b&lMVP" to run [make console execute command "/manuaddv %player% prefix &7[&b&lMVP&7] '"]
+			format slot 5 of player with cyan wool named "&b&lMVP&6&l+" to run [make console execute command "/manuaddv %player% prefix &7[&b&lMVP&6&l+&7] '"]
+			format slot 6 of player with cyan wool named "&b&lMVP&6&l++" to run [make console execute command "/manuaddv %player% prefix &7[&b&lMVP&6&l++&7] '"]
+			format slot 8 of player with barrier named "&fReset" to run [make console execute command "/manudelv %player% prefix"]
+			stop
+		if arg-1 is "clear":
+			execute player command "/nick off"
+			send "&aNickname changed to &e%player%&a!"
+			stop
+		else:
+			execute player command "/nick %arg-1%"
+			send "&aNickname changed to &e%arg-1%&a!"
+			stop

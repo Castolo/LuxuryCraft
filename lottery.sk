@@ -1,0 +1,92 @@
+#========================================================#
+#
+#					  LottoSK
+#						1.3
+#
+#========================================================#
+#		 		by sh4dow | SpigotMC
+#========================================================#
+
+
+
+#========================================================#
+#		 				Config
+#
+#				Edit to your own liking
+#========================================================#
+options:
+	command: lottery											# Default command /lotto
+	admin-permission: lottery.admin							# With this permission, they can end Lotto.
+	enter-price: 10000										# Price to enter Lotto
+
+
+#========================================================#
+#		 				Code
+#
+# 	   DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING
+#========================================================#
+
+command /{@command} [<text>]:
+	trigger:
+		if arg 1 is set:
+			if arg 1 is "list":
+				message "&b&lLotto &r- &7Players:"
+				loop {hasjoined::*}:
+					message "&f%loop-index%"
+					add 1 to {_all}
+				message ""
+				message "&e&lTotal players: &f%{_all}%"
+			else if arg 1 is "join":
+				if {hasjoined::%player%} is not set:
+					set {hasjoined::%player%} to player
+					execute console command "/eco take %player% {@enter-price}"
+					message "&b&lLotto &r- &aYou have successfully entered Lotto!"
+					add {@enter-price} to {lottoprize}
+					stop
+				else:
+					message "&b&lLotto &r- &cYou already joined."
+			else if arg 1 is "prize":
+				message "&b&lLotto &r- &7Current prize: &6$&e%{lottoprize}%"
+			else if arg 1 is "end":
+				if player has permission "{@admin-permission}":
+					set {_winner} to a random element of {hasjoined::*}
+					message "&b&lLotto &r- &7WINNER: %{_winner}%"
+					execute console command "/eco give %{_winner}% %{lottoprize}%"
+					wait 5 ticks
+					message "&b&lLotto &r- &7Rewarded winner with &6$&e%{lottoprize}%"
+					wait 5 ticks
+					delete {lottoprize}
+					delete {hasjoined::*}
+					message "&b&lLotto &r- &7Lotto has been reset."
+					stop
+				else:
+					message "&b&lLotto &r- &cNo permission."
+			else if arg 1 is "refund":
+				if {hasjoined::%player%} is set:
+					delete {hasjoined::%player%}
+					execute console command "/eco give %player% {@enter-price}"
+					message "&b&lLotto &r- &aYou have successfully left Lotto!"
+					remove {@enter-price} from {lottoprize}
+					stop
+				else:
+					message "&b&lLotto &r- &cYou are not in Lotto."
+		else:
+			message "&6-----------------------[&b&lLotto&6]-----------------------"
+			message "&eJoining costs ${@enter-price} and the winner will get all the money people entered with."
+			message ""
+			message "&6/{@command} join &fJoin Lotto"
+			message "&6/{@command} refund &fQuit Lotto"
+			message "&6/{@command} list &fView list of players who joined"
+			message "&6/{@command} prize &fView current prize"
+			if player has permission "{@admin-permission}":
+				message "&6/{@command} end &fProcess the Lotto & reset it"
+			message ""
+			message "&6-----------------------------------------------------"
+
+
+#========================================================#
+#
+# 				I hope you like my skript.
+#				Please don't steal the code.
+#					   Thank you. :)
+#========================================================#

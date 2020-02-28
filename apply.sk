@@ -1,0 +1,12 @@
+command /apply [<text>]:
+	aliases: //apply, /app, //app
+	trigger:
+		if arg-1 is "staff":
+			send "&f• <link:https://luxurycraft.xyz/forum/view/8-staff-applications/>&dCLICK HERE &bto apply for &3&lStaff<reset>"
+			stop
+		if arg-1 is "yt":
+			send "&f• <link:https://forms.gle/SYu9JhuEbYy3VmyD7>&bVisit &dhttps://forms.gle/SYu9JhuEbYy3VmyD7 &bto apply for the &c&lYouTube Rank<reset>"
+			stop
+		else:
+			send "&cPlease type an application name! ex /apply <staff/yt>"
+			stop

@@ -1,0 +1,7 @@
+command /trash:
+	trigger:
+		open chest with 6 row named "               &0[&1Trash&0]" to player
+		
+command /disposal:
+	trigger:
+		open chest with 6 row named "              &0[&1Disposal&0]" to player

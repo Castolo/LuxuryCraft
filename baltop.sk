@@ -1,0 +1,7 @@
+command /baltop:
+	trigger:
+		send "&cBalance Top has been temporarily disabled for RAM issues."
+		
+command /balancetop:
+	trigger:
+		send "&cBalance Top has been temporarily disabled for RAM issues."

@@ -1,0 +1,9 @@
+every 15 minutes:
+		execute console command "/save"
+		stop
+		
+command /save:
+	permission: save.use
+	permission message: &cNo permission!
+	trigger:
+		execute console command "/save-all"

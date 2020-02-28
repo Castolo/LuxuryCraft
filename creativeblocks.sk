@@ -1,0 +1,7 @@
+command /block [<text>]:
+	aliases: /blocks
+	trigger:
+		if player is in world "creative":
+			execute console command "/give %player% %arg-1% 1 0"
+		else:
+			send "&cYou can only get that block in Creative!"

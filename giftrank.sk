@@ -1,0 +1,14 @@
+command /giftvip [<player>]:
+	permission: giftvip.use
+	permission message: &7You need &6&lPremium+ Rank &7to use that command!
+	cooldown: 30 days
+	cooldown message: &cThis command can be executed only once in a month!
+	trigger:
+		if arg-1 has permission "vip.higher":
+			send "&cThat player already has &2&lVIP &crank or higher."
+			stop
+		else:
+			execute console command "manuadd %arg-1% vip"
+			send "&7[&6&lLuxury&c&lRanks&7] &e%arg-1% has been gifted &2&lVIP Rank &efrom %player%!" to all players
+			send "&7[&6&lLuxury&c&lRanks&7] &aRank Gifted!"
+			stop

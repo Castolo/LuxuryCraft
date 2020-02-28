@@ -1,0 +1,12 @@
+command /banlength:
+  trigger:
+    message "&e--------&b&lBAN & MUTE LENGTH&e--------"
+    message "• &bSpamming = &c1d Mute"
+    message "• &bToxic = &c1d Mute"
+    message "• &bBegging &f= &c3d Mute"
+    message "• &bGriefing &f= &c1d Ban"
+    message "• &bAbusing &f= &c7d Ban"
+    message "• &bRedstone Lag Machines &f= &c3d Ban"
+    message "• &bHacking &f= &c7d Ban"
+    message "• &bBan Evading &f= &c30d Ban"
+    message "&e----------------------------------"

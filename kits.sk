@@ -1,0 +1,9 @@
+command /kits:
+	aliases: /kit
+	trigger:
+		open chest with 1 row named "&9&lKits" to player
+		wait 1 tick
+		format slot 1 of player with stone sword named "&f&lStarter" to run [make player execute command "/kit starter"]
+		format slot 3 of player with iron sword named "&2&lVIP" to run [make player execute command "/kit vip"]
+		format slot 5 of player with golden sword named "&6&lPremium" to run [make player execute command "/kit premium"]
+		format slot 7 of player with diamond sword named "&c&lYouTube" to run [make player execute command "/kit yt"]

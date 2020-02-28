@@ -1,0 +1,25 @@
+command /grant [<offline player>] [<text>]:
+	aliases: /rank, /giverank
+	permission: core.grant
+	permission message: &cYou cannot access our rank system.
+	trigger:
+		if arg-1 is not set:
+			send "&cPlease specify a player."
+		else:
+			open chest with 3 rows named "&7Ranks: &a%arg-1%" to player
+			wait 1 tick
+			format slot 0 of player with cyan dye named "&3Owner" with lore "&7Grant &a%arg-1% &3Owner &7rank." to run [make player execute command "manuadd %arg-1% Owner"]
+			format slot 1 of player with yellow dye named "&eAdmin" with lore "&7Grant &a%arg-1% &eAdmin &7rank." to run [make player execute command "manuadd %arg-1% Admin"]      
+			format slot 2 of player with magenta dye named "&dMod" with lore "&7Grant &a%arg-1% &dMod &7rank." to run [make player execute command "manuadd %arg-1% Mod"]
+			format slot 3 of player with red dye named "&4Dev" with lore "&7Grant &a%arg-1% &4Dev &7rank." to run [make player execute command "manuadd %arg-1% Dev"]            
+			format slot 4 of player with purple dye named "&5Builder" with lore "&7Grant &a%arg-1% &5Builder &7rank." to run [make player execute command "manuadd %arg-1% Builder"]            
+			format slot 5 of player with light blue dye named "&bHelper" with lore "&7Grant &a%arg-1% &bHelper &7rank." to run [make player execute command "manuadd %arg-1% Helper"]
+			format slot 6 of player with red dye named "&cYouTube" with lore "&7Grant &a%arg-1% &cYouTube &7rank." to run [make player execute command "manuadd %arg-1% Yt"]
+			format slot 9 of player with cyan dye named "&bMVP" with lore "&7Grant &a%arg-1% &bMVP &7rank." to run [make player execute command "manuadd %arg-1% MVP"]  
+			format slot 10 of player with cyan dye named "&bMVP&6+" with lore "&7Grant &a%arg-1% &bMVP&6+ &7rank." to run [make player execute command "manuadd %arg-1% MVP+"]
+			format slot 11 of player with cyan dye named "&bMVP&6++" with lore "&7Grant &a%arg-1% &bMVP&6++ &7rank." to run [make player execute command "manuadd %arg-1% MVP++"]
+			format slot 12 of player with lime dye named "&aMember" with lore "&7Grant &a%arg-1% &aMember &7rank." to run [make player execute command "manuadd %arg-1% Default"]
+			format slot 13 of player with gray dye named "&8Hacker" with lore "&7Grant &a%arg-1% &8Hacker &7rank." to run [make player execute command "manuadd %arg-1% Hacker"]
+			format slot 14 of player with green dye named "&2VIP" with lore "&7Grant &a%arg-1% &2VIP &7rank." to run [make player execute command "manuadd %arg-1% vip"]
+			format slot 15 of player with green dye named "&2VIP&6+" with lore "&7Grant &a%arg-1% &2VIP&6+ &7rank." to run [make player execute command "manuadd %arg-1% vip+"]
+			format slot 22 of player with barrier named "&c&lCancel" to close

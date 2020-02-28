@@ -1,0 +1,3 @@
+command /store:
+	trigger:
+		message "<link:https://luxurycraft.tebex.io>&3LuxuryCraft Minecraft Webstore! (Click)<reset>"

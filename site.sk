@@ -1,0 +1,4 @@
+command /site:
+	aliases: /website
+	trigger:
+		message "<link:https://luxurycraft.xyz>&dCheck out our Website at &lhttps://luxurycraft.xyz!<reset>"

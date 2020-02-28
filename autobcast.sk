@@ -1,0 +1,17 @@
+every 5 minutes:
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players
+		send "          &b&lTIP &7Link your Discord with" to all players
+		send "                    &b/discord link" to all players
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players
+
+every 7 minutes:
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players
+		send "            &b&lTIP &7Visit the Store" to all players
+		send "        <link:https://luxurycraft.xyz/forum/view/8-staff-applications>&7Click &lHERE &7to apply for Staff<reset>" to all players
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players
+
+every 9 minutes:
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players
+		send "          &b&lTIP &7Join our Discord" to all players
+		send "           &b/discord" to all players
+		send "&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--&c--&6--&e--&a--&b--" to all players

@@ -1,0 +1,9 @@
+command /bal [<offlineplayer>]:
+	aliases: /money, /luxbucks, /luxbux
+	trigger:
+		if arg-1 is not set:
+			send "&7[&6&lLux&c&lEco&7] &eBalance: &a%player's balance%"
+			stop
+		else:
+			send "&7[&6&lLuxury&c&lEco&7] &e%arg-1%'s Balance: &a%arg-1's balance%"
+			stop

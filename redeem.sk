@@ -1,0 +1,26 @@
+options:
+	code1: 3ECE-QWMX-X85U
+	code2: BY54-HKE7-4MCH
+	code3: JVZA-3WL7-XNS9
+	
+command /redeem [<text>]:
+	trigger:
+		if arg-1 is "{@code1}":
+			send "&eYou have successfully redeemed a &6&lPremium Rank&e!"
+			execute console command "/manuadd %player% Premium"
+			execute console command "/mail send CastoloGR &l3ECE-QWMX-X85U has been redeemed by %player%"
+			stop
+		if arg-1 is "{@code2}":
+			send "&eYou have successfully redeemed &a&l$25.000 Cash&e!"
+			execute console command "eco give %player% 25000"
+			execute console command "/mail send CastoloGR &lBY54-HKE7-4MCH has been redeemed by %player%"
+			stop
+		if arg-1 is "{@code3}":
+			send "&eYou have successfully redeemed &6&l10 Legendary Crate Keys&e!"
+			execute console command "/crate key %player% legendary 10"
+			execute console command "/mail send CastoloGR &lJVZA-3WL7-XNS9 has been redeemed by %player%"
+			stop
+			
+		else:
+			send "&cWrong Code!"
+			stopstick
