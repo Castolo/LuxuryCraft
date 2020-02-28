@@ -1,1 +1,1 @@
-This is LuxuryCraft's Official Repository. Please do not take the code and share it as your own creation. Give us full credit.
+This is LuxuryCraft's Official Repository. Please do not take the code and share it as your own creation. Give us full credit. Please note that these will not be updated. You can suggest your ideas for the Skripts on the Discord.
